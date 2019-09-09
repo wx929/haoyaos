@@ -60,58 +60,8 @@ $(function() {
                     $(".con").stop().animate({ "left": "-=200px" });
                 }
             })
-
-            // $("#qiehuan1").click(function() {
-            //     var num = $(".reduction").text()
-            //     if (num == 1) {
-            //         $(".reduction").text("2");
-            //     } else {
-            //         $(".reduction").text("1");
-            //     }
-            //     var left = $(".qie").css("left");
-            //     // var left = $(".qie").css("left");
-
-            //     if (left == "0px") {
-            //         $(".qie").animate({ "left": "-1200px" });
-            //     } else {
-            //         $(".qie").animate({ "left": "0" });
-            //     }
-            // })
-
-
         }
-
     }
-    // var mySwiper = new Swiper('.swiper-container', {
-    //     // direction: 'vertical', // 垂直切换选项
-    //     loop: true, // 循环模式选项
-    //     autoplay: {
-    //         delay: 1000
-    //     },
-
-    //     // 如果需要分页器
-    //     pagination: {
-    //         el: '.swiper-pagination',
-    //         clickable: true,
-    //     },
-
-    //     // 如果需要前进后退按钮
-    //     navigation: {
-    //         nextEl: '.swiper-button-next',
-    //         prevEl: '.swiper-button-prev',
-    //     },
-
-    //     // // 如果需要滚动条
-    //     // scrollbar: {
-    //     //     el: '.swiper-scrollbar',
-    //     // },
-    // })
-    // document.querySelector('.swiper-container').onmouseenter = function() {
-    //     mySwiper.autoplay.stop();
-    // }
-    // document.querySelector('.swiper-container').onmouseleave = function() {
-    //     mySwiper.autoplay.start();
-    // }
     var oCountDown = document.getElementsByClassName("hotProM")[0];
     var target = new Date(2019, 8, 10, 17, 00, 00);
 
@@ -201,4 +151,22 @@ $(function() {
         $(this).addClass('activex').siblings().removeClass('activex');
         $('.ac_cont  ul').eq($(this).index()).css('display', 'block').siblings().css('display', 'none');
     })
+    $(window).scroll(function() {
+        let gun = window.scrollY
+            // console.log(window.scrollY)
+        if (gun >= 1300) {
+            $('.elevator').css('display', 'block')
+        } else {
+            $('.elevator').css('display', 'none')
+        }
+        if (gun > 1300 && gun <= 2000) {
+            $('.d1').css('background', 'green').siblings().css('background', '#626262')
+        } else if (gun > 2000 && gun <= 2700) {
+            $('.d2').css('background', 'blue').siblings().css('background', '#626262')
+        } else if (gun > 2700 && gun <= 3400) {
+            $('.d3').css('background', 'pink').siblings().css('background', '#626262')
+        } else if (gun > 3400) {
+            $('.d4').css('background', 'red').siblings().css('background', '#626262')
+        }
+    });
 })

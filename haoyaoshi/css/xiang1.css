@@ -1,0 +1,147 @@
+body {
+    margin: 0;
+    font: 12px "\5B8B\4F53", san-serif;
+    background: #ffffff;
+}
+
+div,
+ul,
+li {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+img {
+    vertical-align: top;
+    border: 0;
+}
+
+
+/* box */
+
+.box1 {
+    width: 400px;
+    /* margin: 100px auto; */
+    box-sizing: border-box;
+}
+
+.tb-pic a {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.tb-pic a img {
+    vertical-align: middle;
+}
+
+.tb-pic a {
+    *display: block;
+    *font-family: Arial;
+    *line-height: 1;
+}
+
+.aa a img {
+    width: 64px;
+    height: 64px;
+}
+
+.tb-thumb {
+    margin: 10px 0 0;
+    /* overflow: hidden; */
+}
+
+.tb-thumb li {
+    background: none repeat scroll 0 0 transparent;
+    float: left;
+    height: 75px;
+    margin: 2px;
+}
+
+.tb-s310,
+.tb-s310 a {
+    width: 397px;
+    height: 398px;
+}
+
+.tb-s310,
+.tb-s310 img {
+    width: 397px;
+    height: 398px;
+}
+
+.tb-s310 a {
+    *font-size: 271px;
+}
+
+.tb-s40 a {
+    *font-size: 35px;
+}
+
+.tb-s40,
+.tb-s40 a {
+    display: block;
+    height: 75px;
+    width: 70px;
+}
+
+.tb-booth {
+    width: 398px;
+    height: 398px;
+    border: 1px solid #CDCDCD;
+    position: relative;
+    z-index: 1;
+}
+
+.tb-thumb .tb-selected {
+    border: 2px solid red;
+    /* padding: 2px; */
+}
+
+.tb-thumb .tb-selected div {
+    background-color: #FFFFFF;
+    border: medium none;
+    /* margin: -2px; */
+}
+
+div.zoomDiv {
+    z-index: 999;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 200px;
+    height: 200px;
+    background: #ffffff;
+    border: 1px solid #CCCCCC;
+    display: none;
+    text-align: center;
+    overflow: hidden;
+}
+
+div.zoomMask {
+    position: absolute;
+    background: url("../img/mask.png") repeat scroll 0 0 transparent;
+    cursor: move;
+    z-index: 1;
+}
+
+.leftIcon {
+    float: left;
+    background: url(http://design.ehaoyao.com/new_site/static/images/sleft.png) no-repeat center center;
+    width: 15px;
+    height: 75px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.rightIcon {
+    float: right;
+    width: 15px;
+    height: 75px;
+    cursor: pointer;
+    background: url(http://design.ehaoyao.com/new_site/static/images/sright.png) no-repeat center center;
+}

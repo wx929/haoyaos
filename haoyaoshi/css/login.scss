@@ -1,0 +1,183 @@
+ html,
+ body {
+     height: 100%;
+     width: 100%;
+ }
+ 
+ .content {
+     width: 1200px;
+     margin: 0 auto;
+ }
+ 
+ .box {
+     width: 100%;
+     .header {
+         width: 1200px;
+         margin: 0 auto;
+         .logo {
+             float: left;
+             width: 366px;
+             height: 97px;
+             background: url(http://design.ehaoyao.com/new_site/static/images/bg_logo.png) no-repeat;
+         }
+         span {
+             float: left;
+             margin-left: 20px;
+             padding-top: 55px;
+             font-size: 18px;
+             color: #ea5514;
+         }
+     }
+     .main {
+         min-height: 589px;
+         background-color: #f2f2f2;
+         .loginContainer {
+             padding-top: 90px;
+             min-width: 1200px;
+             height: 499px;
+             background: #ff334c url(http://design.ehaoyao.com/new_site/static/images/bg_login.jpg) no-repeat center top;
+             .loginWrap {
+                 float: right;
+                 width: 350px;
+                 background-color: #fff;
+                 height: 390px;
+                 padding: 40px 25px;
+                 box-sizing: border-box;
+                 .title {
+                     color: #484848;
+                     padding-bottom: 20px;
+                     margin-bottom: 20px;
+                     h2 {
+                         float: left;
+                         font-size: 18px;
+                         font-weight: 400;
+                         color: #3c3c3c;
+                     }
+                     a {
+                         float: right;
+                         display: block;
+                         color: #ea5514;
+                         font-size: 14px;
+                     }
+                 }
+                 .item {
+                     position: relative;
+                     width: 300px;
+                     height: 40px;
+                     border: 1px solid #dfdfdf;
+                     label {
+                         float: left;
+                         width: 38px;
+                         height: 40px;
+                         line-height: 40px;
+                         font-size: 16px;
+                         text-align: center;
+                         border-right: 1px solid #dfdfdf;
+                         background-color: #f3f3f3;
+                         // overflow: hidden;
+                     }
+                     .name {
+                         background: #f3f3f3 url(http://design.ehaoyao.com/new_site/static/images/icon_account.png) no-repeat center center;
+                     }
+                     .psw {
+                         background: #f3f3f3 url(http://design.ehaoyao.com/new_site/static/images/icon_pwd.png) no-repeat center center;
+                     }
+                     input {
+                         float: left;
+                         width: 260px;
+                         height: 40px;
+                         line-height: 40px;
+                         border: 0;
+                         text-indent: 10px;
+                         font-size: 14px;
+                     }
+                 }
+                 p {
+                     height: 23px;
+                     line-height: 24px;
+                     color: #ea5514;
+                 }
+                 .item-chk {
+                     margin-bottom: 6px;
+                     input {
+                         margin-bottom: 10px;
+                         position: relative;
+                         top: 2px;
+                     }
+                     label {
+                         line-height: 20px;
+                         cursor: pointer;
+                         color: #999;
+                     }
+                 }
+                 .btn {
+                     display: block;
+                     width: 100%;
+                     height: 40px;
+                     line-height: 40px;
+                     font-size: 20px;
+                     font-family: "\5FAE\8F6F\96C5\9ED1";
+                     color: #fff;
+                     border: 0;
+                     border-radius: 0;
+                     background: #ff334c;
+                 }
+                 .zc {
+                     display: block;
+                     height: 20px;
+                     margin-top: 14px;
+                     a {
+                         color: #ea5514;
+                         font-size: 12px;
+                         i {
+                             position: relative;
+                             top: 2px;
+                             margin-left: 8px;
+                             display: inline-block;
+                             width: 12px;
+                             height: 12px;
+                             background: url(http://design.ehaoyao.com/new_site/static/images/icon_rgst_n.png) no-repeat left center;
+                         }
+                     }
+                 }
+             }
+         }
+         .tip {
+             margin-top: 32px;
+             padding-left: 18px;
+             background: url(http://design.ehaoyao.com/new_site/static/images/icon_warn_tip.png) no-repeat left top 3px;
+             background-size: 13px;
+             font-size: 12px;
+             color: #898989;
+             span {
+                 color: #ff344d;
+             }
+         }
+     }
+     .footer {
+         padding: 50px 0 20px;
+         p {
+             color: #7e7e7e;
+             line-height: 24px;
+             font-size: 16px;
+             text-align: center;
+         }
+         ul {
+             margin: 20px auto;
+             width: 600px;
+             height: 30px;
+             overflow: hidden;
+             li {
+                 float: left;
+                 margin-right: 45px;
+                 width: 83px;
+                 height: 30px;
+                 text-align: center;
+                 img {
+                     max-width: 83px;
+                     height: 30px;
+                 }
+             }
+         }
+     }
+ }

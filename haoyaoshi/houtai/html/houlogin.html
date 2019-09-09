@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../js/jquery-3.4.1.js"></script>
+</head>
+<style>
+    html,
+    body {
+        height: 100%;
+        width: 100%;
+    }
+    
+    .content {
+        width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .box .main {
+        padding-top: 100px;
+        min-height: 589px;
+        background-color: black;
+    }
+    
+    .box .main .loginContainer .loginWrap {
+        /* float: right; */
+        width: 350px;
+        background-color: #fff;
+        height: 390px;
+        padding: 40px 25px;
+        box-sizing: border-box;
+        margin: auto;
+    }
+    
+    .box .main .loginContainer .loginWrap .title {
+        color: #484848;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .box .main .loginContainer .loginWrap .title h2 {
+        float: left;
+        font-size: 18px;
+        font-weight: 400;
+        color: #3c3c3c;
+    }
+    
+    .box .main .loginContainer .loginWrap .title a {
+        float: right;
+        display: block;
+        color: #ea5514;
+        font-size: 14px;
+    }
+    
+    .box .main .loginContainer .loginWrap .item {
+        position: relative;
+        width: 300px;
+        height: 39px;
+        border: 1px solid #dfdfdf;
+    }
+    
+    .box .main .loginContainer .loginWrap .item label {
+        float: left;
+        width: 38px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 16px;
+        text-align: center;
+        border-right: 1px solid #dfdfdf;
+        background-color: #f3f3f3;
+    }
+    
+    .box .main .loginContainer .loginWrap .item .name {
+        background: #f3f3f3 url(http://design.ehaoyao.com/new_site/static/images/icon_account.png) no-repeat center center;
+    }
+    
+    .box .main .loginContainer .loginWrap .item .psw {
+        background: #f3f3f3 url(http://design.ehaoyao.com/new_site/static/images/icon_pwd.png) no-repeat center center;
+    }
+    
+    .box .main .loginContainer .loginWrap .item input {
+        float: left;
+        width: 260px;
+        height: 40px;
+        line-height: 40px;
+        border: 0;
+        text-indent: 10px;
+        font-size: 14px;
+    }
+    
+    .box .main .loginContainer .loginWrap .btn {
+        display: block;
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        font-size: 20px;
+        font-family: "\5FAE\8F6F\96C5\9ED1";
+        color: #fff;
+        border: 0;
+        border-radius: 0;
+        background: #ff334c;
+    }
+    
+    h2 {
+        text-align: center;
+        line-height: 28px;
+    }
+</style>
+
+<body>
+    <div class="box">
+        <h2 style="color:#B2DFEE;font-size:28px;">信息管理系统平台</h2>
+        <div class="main">
+            <div class="loginContainer">
+                <div class="content">
+                    <div class="loginWrap">
+                        <div class="item">
+                            <label for="" class="name"></label>
+                            <input type="text" placeholder="手机/邮箱/用户名" id="UserName">
+                        </div>
+                        <div class="item">
+                            <label for="" class="psw"></label>
+                            <input type="password" placeholder="密码" id="UserPassword">
+                        </div>
+                        <div class="item">
+                            <button class="btn">登   录</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    (function() {
+        $('.btn').click(function() {
+            let phone = $('#UserName').val();
+            let password = $('#UserPassword').val();
+            $.ajax({
+                type: "post",
+                url: "../php/houlogin.php",
+                data: {
+                    phone: phone,
+                    password: password
+                },
+                dataType: "json",
+                success: function(response) {
+                    if (response.status == "success") {
+                        location.href = "http://127.0.0.1/haoyaoshi/haoyaos/haoyaoshi/houtai/html/guanli.html";
+                    } else {
+                        alert('登录失败')
+                    }
+                }
+            });
+
+        })
+    })()
+</script>
+
+</html>

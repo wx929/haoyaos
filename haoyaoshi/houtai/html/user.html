@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../js/jquery-3.4.1.js"></script>
+</head>
+<style>
+    table {
+        border-collapse: collapse;
+    }
+    
+    td {
+        padding: 30px;
+        border: 1px solid #ccc;
+    }
+    
+    .xiugai {
+        display: inline-block;
+        background: pink;
+        width: 20px;
+        height: 50px;
+        border: 1px solid red;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <table>
+        <tr>
+            <td>phone</td>
+            <td>password</td>
+            <td>操作</td>
+            <td>修改密码</td>
+
+            <!-- <tr>
+            <td>单元格</td>
+            <td>单元格</td>
+             <td>shanchu</td>
+        </tr>
+        <tr>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+        <tr>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr> -->
+    </table>
+</body>
+<script>
+    (function() {
+        $.ajax({
+            type: "post",
+            url: "../php/urer.php",
+            data: "data",
+            dataType: "json",
+            success: function(response) {
+                let html = response.map(arr => {
+                    return `<tr>
+            <td class="phonenum">${arr.phone}</td>
+            <td>${arr.password}</td>
+             <td  class="del">注销用户</td>
+             <td><input type="text" class="in1">
+                <span  class="xiugai">修改</span></td>
+            </tr>`
+                }).join('');
+                $('table').append(html)
+            }
+        });
+    })();
+    $('table').on('click', '.del', function() {
+        let phone = $(this).prevAll('.phonenum').text() * 1;
+        console.log(phone)
+        $.ajax({
+            type: "post",
+            url: "../php/del.php",
+            data: {
+                phone: phone,
+
+            },
+            // dataType: "dataType",
+            success: function(response) {}
+        });
+        $(this).parent().remove()
+    })
+    $('table').on('click', '.xiugai', function() {
+        let regPassword = /^[a-zA-Z0-9]{6,16}$/;
+        let mi = $.trim($(this).prevAll('.in1').val());
+        let phone = $(this).parent().prevAll('.phonenum').text() * 1;
+        // console.log(phone)
+        if (mi.length == 0) {
+            alert("密码不能为空");
+        } else if (!regPassword.test(mi)) {
+            alert("您输入的密码不符合规范");
+        } else {
+            alert("OK");
+            $.ajax({
+                type: "post",
+                url: "../php/xiugai.php",
+                data: {
+                    phone: phone,
+                    password: mi,
+                },
+                // dataType: "json",
+                success: function(response) {
+
+                }
+            });
+            window.location.reload()
+        }
+
+
+    })
+</script>
+
+</html>

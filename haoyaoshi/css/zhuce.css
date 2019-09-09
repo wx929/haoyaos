@@ -1,0 +1,173 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.right {
+  color: green;
+}
+
+.false {
+  color: red;
+}
+
+.box {
+  width: 100%;
+  color: #999;
+}
+
+.box .header {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.box .header .logo {
+  float: left;
+  width: 366px;
+  height: 97px;
+  background: url(http://design.ehaoyao.com/new_site/static/images/bg_logo.png) no-repeat;
+}
+
+.box .header span {
+  float: left;
+  margin-left: 20px;
+  padding-top: 55px;
+  font-size: 18px;
+  color: #ff334c;
+}
+
+.box .header .loginTips {
+  float: right;
+  padding-top: 60px;
+  font-size: 16px;
+}
+
+.box .header .loginTips .btn_login {
+  color: #ff334c;
+}
+
+.box .main {
+  min-height: 589px;
+  background-color: #f2f2f2;
+  padding: 70px 0 0 0;
+}
+
+.box .main .register-tab {
+  margin: 0 auto;
+  width: 1000px;
+  background-color: #fff;
+  overflow: hidden;
+  height: 500px;
+  border: 1px solid #dfdfdf;
+}
+
+.box .main .register-tab .tabItem {
+  margin: 60px auto 0;
+  width: 398px;
+}
+
+.box .main .register-tab .tabItem .item {
+  width: 398px;
+  position: relative;
+  height: 40px;
+  border: 1px solid #dfdfdf;
+}
+
+.box .main .register-tab .tabItem .item label {
+  float: left;
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+  text-align: center;
+  background-color: #f3f3f3;
+  overflow: hidden;
+  width: 110px;
+  border-right: 0;
+}
+
+.box .main .register-tab .tabItem .item input {
+  float: left;
+  width: 260px;
+  height: 40px;
+  line-height: 40px;
+  border: 0;
+  text-indent: 10px;
+  font-size: 14px;
+}
+
+.box .main .register-tab .tabItem p {
+  height: 30px;
+  line-height: 30px;
+  margin-bottom: 5px;
+}
+
+.box .main .register-tab .tabItem .check {
+  margin-bottom: 6px;
+  position: relative;
+}
+
+.box .main .register-tab .tabItem .duanx {
+  position: relative;
+}
+
+.box .main .register-tab .tabItem .duanx span {
+  float: right;
+  width: 96px;
+  line-height: 40px;
+  background-color: #f2f2f2;
+  font-size: 14px;
+  color: #050505;
+  text-align: center;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+}
+
+.box .main .register-tab .tabItem .m20 {
+  margin-top: 20px;
+}
+
+.box .main .register-tab .tabItem button {
+  display: block;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  font-size: 20px;
+  font-family: "\5FAE\8F6F\96C5\9ED1";
+  color: #fff;
+  border: 0;
+  border-radius: 0;
+  background: #ff334c;
+}
+
+.box .footer {
+  padding: 50px 0 20px;
+}
+
+.box .footer p {
+  color: #7e7e7e;
+  line-height: 24px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.box .footer ul {
+  margin: 20px auto;
+  width: 600px;
+  height: 30px;
+  overflow: hidden;
+}
+
+.box .footer ul li {
+  float: left;
+  margin-right: 45px;
+  width: 83px;
+  height: 30px;
+  text-align: center;
+}
+
+.box .footer ul li img {
+  max-width: 83px;
+  height: 30px;
+}

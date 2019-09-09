@@ -624,6 +624,7 @@ html body {
   width: 34px;
   overflow: hidden;
   z-index: 100;
+  display: none;
 }
 
 .box .elevator a {

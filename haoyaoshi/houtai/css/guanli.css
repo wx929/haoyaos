@@ -1,0 +1,38 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.box {
+    width: 100%;
+}
+
+.header {
+    width: 100%;
+    height: 60px;
+    background: #eeee;
+    text-align: center;
+    line-height: 60px;
+    font-size: 20px;
+}
+
+.main .left {
+    width: 20%;
+    height: auto;
+    float: left;
+    background: pink;
+}
+
+.left li {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #000;
+    background: lightsteelblue;
+}
+
+.left .active {
+    background: lightsalmon;
+}

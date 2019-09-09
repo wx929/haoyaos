@@ -19,6 +19,7 @@ $(function() {
     $('.top_coupon').mouseleave(function() {
         $('.top_coupon01').removeClass("top_coupon02");
     })
-
-
+    $('.font_dark').click(function() {
+        localStorage.url = location.href; //jizhuwangzhi
+    })
 })
